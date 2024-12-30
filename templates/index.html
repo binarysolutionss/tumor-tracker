@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TumorTracker - Home</title>
+<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css">
+<link href="{{url_for('static', filename='img/logos/tumorTracker fave logo.png')}}" rel="icon">
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">    
+        <a href="#">
+            <img src="{{url_for('static', filename='img/logos/tumorTracker logo.png')}}" class="nav-logo" alt="TumorTracker Logo">
+        </a>
+        <ul class="nav-options">
+            <li>
+                <a href="#" class="nav-links">About</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End of Nav Bar -->
+ 
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content-card">
+            <div class="content-card-main">
+                <div class="card-content-left">
+                    <img src="{{url_for('static', filename='img/vector img/undraw_medical_research_qg4d.png')}}" class="hero-vector" alt="Meical Care Vector">
+                </div>
+                <div class="card-content-right">
+                    <h4>Let's diagnose you</h4>
+    
+                    <!-- Form -->
+                    <form class="card-form" method="post" enctype="multipart/form-data">
+                        <p>Below, select a clear image of the suspected melanoma skin lesion you want to analyze and then click the "Upload" button.</p>
+                        <input class="select-image" id="select-image" type="file" name="file" accept="image/*">
+                        <input type="submit" class="submit-btn" value="Upload">
+                    </form>
+                    <!-- End of Form -->
+                </div>
+            </div>
+
+            <div id="result">
+                {% if prediction %}
+                <div class"{{ prediction }}">
+                    <h4>Detection result:</h4>
+                    <div class="confidence">
+                        Confidence: {{ confidence }}
+                    </div>
+                    <p>{{ info.description }}</p>
+                    <div class="recommendations">
+                        <h4>Recommendations:</h4>
+                        <ul>
+                            {% for rec in info.recommendations %}
+                            <li>{{ rec }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+                {% if error %}
+                <div class="error">
+                    Error: {{ error }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="copyrights">
+                <p>By using our software, you are agreeing to our <a href="#">Terms and Conditions</a></p>
+                <div class="copyrighted">
+                    &copy;Copyright 2024. All Rights Reserved. <br> 
+                    <p>Powered by <strong>Binary Solutions</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Hero -->
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+
+</body>
+
+</html>
