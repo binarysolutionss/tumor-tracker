@@ -1,5 +1,7 @@
 ## TumorTracker
 
+![TumorTracker Logo]([https://drive.google.com/uc?export=view&id=YOUR_FILE_ID](https://drive.google.com/file/d/1hdfW0bxNQbtgG1kqLKnrlWRsy5ZaY0BG/view?usp=drive_link))
+
 A machine learning-powered web application for melanoma skin cancer detection using deep learning and computer vision.
 
 ## Overview
