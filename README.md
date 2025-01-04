@@ -1,26 +1,31 @@
-TumorTracker
+## TumorTracker
 
 A machine learning-powered web application for melanoma skin cancer detection using deep learning and computer vision.
 
-Overview
+## Overview
+
 TumorTracker is a Flask-based web application that uses a convolutional neural network (CNN) to analyze images of skin lesions and detect potential melanoma. The system provides real-time analysis with confidence scores and recommended actions based on the detection results.
 
-Features
-Real-time image processing and analysis
-Deep learning-based melanoma detection
-Confidence score reporting
-Custom recommendations based on detection results
-User-friendly web interface
-Support for multiple image formats (PNG, JPG, JPEG)
+## Features
 
-Technology Stack
+-Real-time image processing and analysis
+-Deep learning-based melanoma detection
+-Confidence score reporting
+-Custom recommendations based on detection results
+-User-friendly web interface
+-Support for multiple image formats (PNG, JPG, JPEG)
+
+## Technology Stack
+
 Backend Framework: Flask (Pyhthon)
 Machine Learning: TensorFlow/Keras
 Frontend: HTML, CSS, JavaScript
 Image Processing: PIL (Python Imaging Library)
 Deep Learning Model: Custom CNN Architecture
 
-Project Structure
+##Project Structure
+
+Root
 ├── app.py                  # Main Flask application
 ├── train_model.py          # Model training script
 ├── templates/
@@ -31,7 +36,8 @@ Project Structure
 │   └── img/
 └── models/
     └── melanoma_model.h5  # Trained model file
-Model Architecture
+    
+## Model Architecture
 The CNN model consists of:
 
 3 Convolutional layers with ReLU activation
@@ -40,21 +46,22 @@ Flatten layer
 Dense layers with dropout for regularization
 Binary classification output
 
-Installation
+## Installation
 
 Download melanoma test data images
 "https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images"
 
-Clone the repository:
+## Clone the repository:
 
 bashCopygit clone [repository-url]
 
-Install required dependencies:
+## Install required dependencies:
+
 Flask
 Tensorflow
 numpy
 
-Run the application:
+## Run the application:
 
 bashCopypython app.py
 Usage
@@ -64,7 +71,7 @@ Upload an image of the skin lesion
 Click "Upload" to process the image
 View the detection results and recommendations
 
-Training the Model
+## Training the Model
 To train the model with your own dataset:
 
 Organize your dataset in the following structure:
@@ -77,7 +84,7 @@ Copydata/melanoma/
     ├── benign/
     └── malignant/
 
-Run the training script:
+## Run the training script:
 
 bashCopypython train_model.py
 Contributing
@@ -88,8 +95,10 @@ Disclaimer
 This tool is intended for educational and research purposes only. It should not be used as a substitute for professional medical diagnosis. Always consult with healthcare professionals for medical advice.
 Acknowledgments
 
-Developed by Binary Solutions
+##Developed by Binary Solutions
+
 Thanks to all contributors and the open-source community
 
-Contact
+## Contact
+
 For support or queries, please contact Binary Solutions through the provided contact information in the application.
